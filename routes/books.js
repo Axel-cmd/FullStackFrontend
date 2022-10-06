@@ -21,4 +21,8 @@ router.get('/:id?', async (req, res) => {
   }
 });
 
+router.post('/', (req, res) => {
+  
+})
+
 module.exports = router;

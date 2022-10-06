@@ -1,4 +1,3 @@
-const {MongoClient, ObjectId} = require('mongodb');
 const mongoose = require("mongoose")
 
 const uri = "mongodb+srv://axel:haFhbca91@cluster0.rsqvv.mongodb.net/fullstackbackend?retryWrites=true&w=majority";

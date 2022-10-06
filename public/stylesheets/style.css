@@ -4,11 +4,5 @@ body {
 }
 
 a {
-  color: #00B7FF;
-}
-
-.book-container {
-  width: "300px";
-  display: 'flex';
-  justify-content: "space-between"
+  color: #266781;
 }
