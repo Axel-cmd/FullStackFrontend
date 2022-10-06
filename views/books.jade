@@ -1,0 +1,18 @@
+extends layout
+
+block content
+
+    if books == null || books.length == 0
+        h1 Aucun livre !
+    else 
+        h1 Liste des livres : 
+        div 
+            each item, index in books   
+                div(style={padding: '20px' ,width: '300px', height: '100px', 'border-radius': '20px', 'box-shadow': '0 0 20px 8px #d0d0d0', 'margin-bottom': '20px',} )
+                    p(style={"font-weight": "bold"}) #{item.title}
+                    a(href='/books/#{item._id}', style={'margin-left': "50px"})
+                        p voir les détails du livre
+                        
+    
+    a(href='/')
+        p retour à l'accueil 

@@ -1,0 +1,26 @@
+extends layout
+
+block content
+
+    h1 Détail du livre  : 
+    
+    div(style={width: "300px", display: 'flex', 'justify-content': "space-between"}) 
+        p TITRE : 
+        p #{book.title}
+
+    div(style={width: "300px", display: 'flex', 'justify-content': "space-between"}) 
+        p AUTEUR : 
+        p #{book.author}
+
+    div(style={width: "300px", display: 'flex', 'justify-content': "space-between"}) 
+        p ANNE DE PUBLICATION : 
+        p #{book.year}
+
+
+    div(style={width: "300px", display: 'flex', 'justify-content': "space-between"}) 
+        p NOMBRE DE PAGES : 
+        p #{book.pages}
+
+
+    a(href='/books')
+        p retour
