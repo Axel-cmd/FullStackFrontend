@@ -16,8 +16,18 @@ async function updateBook(query, update, options) {
     return Books.findOneAndUpdate(query, update, options)
 }
 
+async function addBook(book) {
+    try {
+        return await Books.create(book);
+    } catch (error) {
+        throw new Error(error)
+    }
+}
+
 module.exports= {
     fetchAllBooks,
     fetchOneBook,
-    deleteOneBook
+    deleteOneBook,
+    addBook,
+    updateBook
 }
