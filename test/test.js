@@ -1,5 +1,8 @@
 const assert = require('assert')
-
+const chai = require('chai')
+const chaiHttp = require('chai-http')
+const app = require('../app')
+chai.use(chaiHttp)
 //#region EXERCICE 3 
 
 function somme(x, y) {
@@ -27,5 +30,29 @@ describe("#somme()", function() {
     })
 
 })
+
+//#endregion
+
+//#region EXERCICE 4 
+
+// test sur l'api créer 
+
+describe("Test de connexion à l'API", function() {
+    
+
+    describe("/GET racine", function () {
+
+        it("Devrait répondre Bonjour !", function() {
+            chai.request(app)
+                .get('/')
+                .end((err, res) => {
+                    assert.equal(res.body, "Bonjour !", "Ne fonctionne pas")
+                })
+        })
+
+    })
+
+})
+
 
 //#endregion
